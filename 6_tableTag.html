@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블 태그</title>
+    <style>
+      table {
+        width: 800px;
+        height: 200px;
+        text-align: center;
+      }
+      .cell {
+        background-color: yellow;
+      }
+      img {
+        width: 200px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h4>4행 3열 표를 만들어 봅시다.</h4>
+    <table border="1" >
+      <tr> <!-- 1행 -->
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr> <!-- 2행 -->
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+      </tr>
+      <tr> <!-- 3행 -->
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+      </tr>
+      <tr> <!-- 4행 -->
+        <td>10</td>
+        <td>11</td>
+        <td>12</td>
+      </tr>
+    </table>
+
+    <h4>3행 4열 표를 만들어 봅시다.</h4>
+    <!-- columm 을 병합할 때 : colspan="합쳐질 cell의 수"-->
+    <!-- row 를 병합할 때 : rowspan="합쳐질 cell의 수"-->
+    <table border="1">
+      <tr>
+        <td colspan="2" class="cell">1</td>
+        <!-- <td>2<td>-->
+        <td>3</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+        <td rowspan="2" class="cell">8</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>10</td>
+        <td>11</td>
+        <!-- <td>12<td>-->
+      </tr>
+    </table>
+
+    <h4>8열 4행 표를 만들어 병합해봅시다.</h4>
+    <table border="1">
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td colspan="2" class="cell">3</td>
+        <!-- <td>4</td> -->
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td rowspan="3" class="cell">10</td>
+        <td>11</td>
+        <td>12</td>
+      </tr>
+      <tr>
+        <td>13</td>
+        <!-- <td>14</td> -->
+        <td>15</td>
+        <td>16</td>
+      </tr>
+      <tr>
+        <td>17</td>
+        <!-- <td>18</td> -->
+        <td>19</td>
+        <td>20</td>
+      </tr>
+      <tr>
+        <td>21</td>
+        <td>22</td>
+        <td>23</td>
+        <td>24</td>
+      </tr>
+      <tr>
+        <td>25</td>
+        <td colspan="2" class="cell">26</td>
+        <!-- <td>27</td> -->
+        <td>28</td>
+      </tr>
+      <tr>
+        <td>29</td>
+        <td>30</td>
+        <td>31</td>
+        <td>32</td>
+      </tr>
+    </table>
+
+    <h4>주소록 만들기</h4>
+    <table border="1">
+      <caption>주소록</caption>
+      <thead>
+        <th>이름</th>
+        <th>전화번호</th>
+        <th>주소</th>
+        <th>사진</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>노하영</td>
+          <td>010-xxxx-xxxxx</td>
+          <td>대한민국</td>
+          <td><img src="mung.jpg" ></td>
+        </tr>
+        <tr>
+          <td>김연지</td>
+          <td>010-xxxx-xxxxx</td>
+          <td>대한민국</td>
+          <td><img src="mung.jpg" ></td>
+        </tr>
+        <tr>
+          <td>서지우</td>
+          <td>010-xxxx-xxxxx</td>
+          <td>대한민국</td>
+          <td><img src="mung.jpg" ></td>
+        </tr>
+        <tr>
+          <td>김수혁</td>
+          <td>010-xxxx-xxxxx</td>
+          <td>대한민국</td>
+          <td><img src="mung.jpg" ></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
