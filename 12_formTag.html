@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form 태그</title>
+  </head>
+  <body>
+    <h3>로그인</h3>
+    <form action="" method="get">
+      <div>
+        ID : 
+        <input type="text">
+      </div>
+      <div>
+        PW :
+        <input type="password">
+      </div>
+      <div> 
+        <input type="submit" value="Login" id="login">
+        <!-- 데이터를 전송하는 역할 -->
+        <input type="reset" value="Reset" id="login_reset">
+        <!-- 페이지를 다시 reload 하는 역할-->
+      </div>
+    </form>
+      <hr>
+      <!-- lable 사용법-->
+      <!-- 1) lable 태그 안에 input 태그 넣어서 사용 -->
+      <!-- <label>ID : <input type="text"></label> -->
+      <div>
+      <!-- 2) for 속성과 id 값을 일치시켜 사용 -->
+        <label for="mem_id">ID : </label>
+        <input type="text" id="mem_id">
+      </div>
+      <div>
+        <label for="mem_pw"> Password : </label>
+        <input type="password" id="mem_pw">
+      </div>
+
+  </body>
+</html>
