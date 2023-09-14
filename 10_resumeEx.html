@@ -57,11 +57,11 @@
       </tr>
       <tr>
         <th><i class="fa-solid fa-cake-candles"></i>생년월일</th>
-        <td><input type="date" name="birthDay" id="bDay" ></td>
+        <td><input type="date" name="birthDay"></td>
         <th><i class="fa-solid fa-venus-mars"></i>성별</th>
         <td>
-          <input type="radio" name="gender" id="male" checked> 남
-          <input type="radio" name="gender" id="female"> 여
+          <input type="radio" name="gender" value="male" checked> 남
+          <input type="radio" name="gender" value="female"> 여
         </td>
       </tr>
       <tr>
@@ -115,14 +115,14 @@
       </tr>
       <tr>
         <td>
-          <input type="month" name="gredure" id="gradureUni1">
+          <input type="month" name="gredure" >
            - 
-          <input type="month" name="gredure" id="gradureUni2">
+          <input type="month" name="gredure" >
         </td>
         <td><a href="http://sejong.ak.kr">세종대학교</a></td>
         <td>건축학과</td>
         <td>
-          <input type="text" name="score" id="scoreUni" value="/4.5">
+          <input type="text" name="score" value="/4.5">
         </td>
         <td>
           <select name="locationUni" id="uniLocation">
@@ -137,7 +137,7 @@
         <td>
           <input type="month" name="gredure" id="gradureUni1">
           - 
-         <input type="month" name="gredure" id="gradureUni2">
+          <input type="month" name="gredure" id="gradureUni2">
         </td>
         <td></td>
         <td></td>
@@ -148,7 +148,7 @@
         <td>
           <input type="month" name="gredure" id="gradureUni1">
           - 
-         <input type="month" name="gredure" id="gradureUni2">
+          <input type="month" name="gredure" id="gradureUni2">
         </td>
         <td></td>
         <td></td>
@@ -159,7 +159,7 @@
         <td>
           <input type="month" name="gredure" id="gradureUni1">
           - 
-         <input type="month" name="gredure" id="gradureUni2">
+          <input type="month" name="gredure" id="gradureUni2">
         </td>
         <td></td>
         <td></td>
@@ -178,38 +178,50 @@
         <th>점수 / 등급</th>
       </tr>
       <tr>
-        <td>2020. 11</td>
+        <td>
+          <input type="month" name="cetificate">
+        </td>
         <td>사업용 조종사</td>
         <td>도로교통안전공단</td>
         <td>다발/단발/계기</td>
       </tr>
       <tr>
-        <td>2020. ??</td>
+        <td>
+          <input type="month" name="cetificate">
+        </td>
         <td>운전면허증</td>
         <td>서울시경찰청</td>
         <td>1종 대형</td>
       </tr>
       <tr>
-        <td></td>
+        <td>
+          <input type="month" name="cetificate">
+        </td>
         <td></td>
         <td></td>
         <td></td>
       </tr>
       <tr>
         <th rowspan="3">외국어<br>/<br>공인시험</th>
-        <td>2021. 09</td>
+        <td>
+          <input type="month" name="cetificate">
+        </td>
         <td>TOEIC</td>
         <td>ETS</td>
         <td></td>
       </tr>
       <tr>
-        <td>2021. 09</td>
+        <td>
+          <input type="month" name="cetificate">
+        </td>
         <td>한국사능력검정</td>
         <td>국사편찬위원회</td>
         <td>1급</td>
       </tr>
       <tr>
-        <td></td>
+        <td>
+          <input type="month" name="cetificate">
+        </td>
         <td></td>
         <td></td>
         <td></td>
@@ -224,22 +236,22 @@
         <th>기관</th>
       </tr>
       <tr>
-        <td>2010 ~ 2011</td>
+        <td><input type="month" name="activity"></td>
         <td>호주 워킹홀리데이</td>
         <td></td>
       </tr>
       <tr>
-        <td>2018 ~ 2019</td>
+        <td><input type="month" name="activity"></td>
         <td>FAA PPL course</td>
         <td><a href="https://www.flyaeroguard.com/">Aeroguard Flight Training Center</a></td>
       </tr>
       <tr>
-        <td>2019 ~ 2020</td>
+        <td><input type="month" name="activity"></td>
         <td>사업용 조종사 통합 과정</td>
         <td><a href="pilot.sc.kr">울진비행교육원</a></td>
       </tr>
       <tr>
-        <td>2023 ~ 2024</td>
+        <td><input type="month" name="activity"></td>
         <td>Java 빅데이터 과정</td>
         <td><a href="goott.co.kr">Goott Academy</a></td>
       </tr>
@@ -255,9 +267,21 @@
       </tr>
       <tr>
         <th>근무기간</th>
-        <td>2012. 06 ~ 2016. 07</td>
-        <td>2016. 07 ~ 2018. 04</td>
-        <td>2021. 02 ~ 2022.02</td>
+        <td>
+          <input type="month" name="workExprience">
+          - 
+          <input type="month" name="workExprience">
+        </td>
+        <td>
+          <input type="month" name="workExprience">
+          - 
+          <input type="month" name="workExprience">
+        </td>
+        <td>
+          <input type="month" name="workExprience">
+          - 
+          <input type="month" name="workExprience">
+        </td>
       </tr>
       <tr>
         <th>근무부서<br>/직위</th>
