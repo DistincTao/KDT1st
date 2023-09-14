@@ -8,6 +8,7 @@
   <body>
     <h1>우리의 멤버가 되시는 것에 깊이 감사드립니다!!</h1>
     <h2>회원 가입</h2>
+    <form action="13_4_index.html">
     <table class="mem_type">
       <tr>
         <td>회원 구분</td>
@@ -24,21 +25,21 @@
       <tr>
         <td>아이디</td>
         <td>
-          <input type="text" name="userId" size="20" min="4" max="16">
+          <input type="text" name="userId" size="20">
           (영문소문자/숫자, 4~16자)
         </td>
       </tr>
       <tr>
         <td>비밀번호</td>
         <td>
-          <input type="password" name="userPw" size="20" min="8" max="20">
+          <input type="password" name="userPw" size="20">
           (영문대소문자/숫자, 8~20자)
         </td>
       </tr>
       <tr>
         <td>비밀번호 확인</td>
         <td>
-          <input type="password" name="userPw" size="20" min="8" max="20">
+          <input type="password" name="userPw" size="20">
         </td>
       </tr>
       <tr>
@@ -89,20 +90,61 @@
           <input type="text" name="phone3" size="6" max="4" required>
         </td>
       </tr>
-
-
+      <tr>
+        <td>이메일</td>
+        <td>
+          <input type="email" name="email" size="40" pattern="+@example.com" required placeholder="user@example.com">
+        </td>
+      </tr>
     </table>
-
-    이메일
-
-    추가 정보
-    성별
-    생년월일
-    지역
+    <h2>추가 정보</h2>
+    <table>
+      <tr>
+        <td>성별</td>
+        <td>
+          <input type="radio" name="gender" value="male"> 남성
+          <input type="radio" name="gender" value="female"> 여성
+          <input type="radio" name="gender" value="etc"> 기타
+        </td>
+      </tr>
+      <tr>
+        <td>생년월일</td>
+        <td>
+          <input type="date" name="birthday" id="bDay" min="1950-01-01" max="2023-12-31">
+        </td>
+      </tr>
+      <tr>
+        <td>사는지역</td>
+        <select name="homeTown" id="home">
+          <option value="region_01">서울</option>
+          <option value="region_02">경기</option>
+          <option value="region_03">인천</option>
+          <option value="region_04">강원</option>
+          <option value="region_05">충남</option>
+          <option value="region_06">충북</option>
+          <option value="region_07">대전</option>
+          <option value="region_08">경남</option>
+          <option value="region_09">경북</option>
+          <option value="region_10">대구</option>
+          <option value="region_11">부산</option>
+          <option value="region_12">울산</option>
+          <option value="region_13">전북</option>
+          <option value="region_14">전남</option>
+          <option value="region_15">광주</option>
+          <option value="region_16">세종</option>
+          <option value="region_17">제주</option>
+          <option value="region_18">해외</option>
+        </select>
+      </tr>
+    </table>
 
     (체크박스) 이용약관 동의 
     (체크박스) 개인정보 수집 및 이용 동의
     (체크박스) 정보 수신 동의 [선택]
+
+
+  </form>
+
 
     회원가입 -> index page 연동
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
