@@ -2,7 +2,7 @@
 <html lang="KO">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta class="viewport" content="width=device-width, initial-scale=1.0">
     <title>이력서</title>
     <style>
       html {
@@ -32,7 +32,7 @@
         width: 300px;
         height: 25px;
         text-align: center;
-        color: beige;
+        /* color: beige; */
       }
       table th {
         width: 200px;
@@ -50,24 +50,28 @@
       <caption>1. 인 적 사 항</caption>
       <tr>
         <td rowspan="6"><img src="mung.jpg" alt="임시"></td> 
-        <th><i class="fa-regular fa-user"></i>성명 (한글)</th>
-        <td>조 태 호</td>
-        <th><i class="fa-solid fa-user"></i>성명 (영문)</th>
-        <td>Taeho Cho</td>
+        <th><i class="fa-regular fa-user"></i>성명<br>(한글)</th>
+        <td>
+          <input type="text" class="koclass" placeholder="조 태 호">
+        </td>
+        <th><i class="fa-solid fa-user"></i>성명 <br>(영문)</th>
+        <td>
+        <input type="text" class="enclass" placeholder="Eugene Cho">
+      </td>
       </tr>
       <tr>
         <th><i class="fa-solid fa-cake-candles"></i>생년월일</th>
-        <td><input type="date" name="birthDay"></td>
+        <td><input type="date" class="birthDay"></td>
         <th><i class="fa-solid fa-venus-mars"></i>성별</th>
         <td>
-          <input type="radio" name="gender" value="male" checked> 남
-          <input type="radio" name="gender" value="female"> 여
+          <input type="radio" class="gender" value="male" checked> 남
+          <input type="radio" class="gender" value="female"> 여
         </td>
       </tr>
       <tr>
         <th><i class="fa-solid fa-jet-fighter"></i>병역사항</th>
         <td>
-          <select name="military">
+          <select class="military">
             <option value="rokaf" selected>공군</option>
             <option value="roka">육군</option>
             <option value="rokseal">해군</option>
@@ -75,27 +79,40 @@
             <option value="none">미필</option>
           </select>
            
-          <select name="military">
+          <select class="military">
             <option value="full" selected>만기전역</option>
             <option value="etc">기타</option>
 
         </td>
-        <th>보훈 대상 여부</th>
+        <th>보훈 대상</th>
         <td>
-          <input type="radio" name="bohun" value="yes"> 해당
-          <input type="radio" name="bohun" value="no" checked>해당없음
+          <input type="radio" class="bohun" value="yes"> 해당
+          <input type="radio" class="bohun" value="no" checked>해당없음
         </td>
       </tr>
       <tr>
         <th><i class="fa-solid fa-location-dot"></i>현주소</th>
-        <td colspan="3">서울시 영등포구 가마산로 312</td>
+        <td colspan="3">
+          <textarea class="address" id="addr" cols="80" rows="1">서울시 영등포구 가마산로 312</textarea>
+        </td>
       </tr>
       <tr>
         <th><i class="fa-solid fa-mobile-screen-button"></i>연락처</th>
-        <td>010-8610-0861</td>
+        <td>
+          <select class="phonrNo">
+            <option value="010">010</option>
+            <option value="011">011</option>
+            <option value="016">016</option>
+            <option value="017">017</option>
+            <option value="019">019</option>
+          </select>
+          -
+          <input type="text" class="phoneNo2" max="4" size="4">
+          -
+          <input type="text" class="phoneNo3" max="4" size="4">
         <th><i class="fa-solid fa-at"></i>E-mail</th>
         <td>
-          <input type="email" value="distinctao@gmail.com">
+          <input type="email" value="distinctao@gmail.com" required="*@*.*">
         </td>
       </tr>
       <tr>
@@ -115,17 +132,21 @@
       </tr>
       <tr>
         <td>
-          <input type="month" name="gredure" >
+          <input type="month" class="gredure" >
            - 
-          <input type="month" name="gredure" >
-        </td>
-        <td><a href="http://sejong.ak.kr">세종대학교</a></td>
-        <td>건축학과</td>
-        <td>
-          <input type="text" name="score" value="/4.5">
+          <input type="month" class="gredure" >
         </td>
         <td>
-          <select name="locationUni" id="uniLocation">
+          <input type="text" class="schoolclass" size="20">  
+        </td>
+        <td>
+          <input type="text" class="major" size="15">  
+        </td>
+        <td>
+          <input type="text" class="score" value="/4.5" size="10">
+        </td>
+        <td>
+          <select class="locationUni" id="uniLocation">
             <option value="seoul">서울</option>
             <option value="incheon">인천</option>
             <option value="kyounki">경기</option>
@@ -135,36 +156,68 @@
       </tr>
       <tr>
         <td>
-          <input type="month" name="gredure" id="gradureUni1">
+          <input type="month" class="gredure" id="gradureUni1">
           - 
-          <input type="month" name="gredure" id="gradureUni2">
+          <input type="month" class="gredure" id="gradureUni2">
         </td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>
+          <input type="text" class="schoolclass" size="20">  
+        </td>
+        <td>
+          <input type="text" class="major" size="15">
+        </td>
+        <td>
+          <input type="text" class="score" value="/4.5" size="10">
+        </td>
+        <td>
+          <select class="locationUni" id="uniLocation">
+            <option value="seoul">서울</option>
+            <option value="incheon">인천</option>
+            <option value="kyounki">경기</option>
+            <option value="pusan">부산</option>
+        </td>
       </tr>
       <tr>
         <td>
-          <input type="month" name="gredure" id="gradureUni1">
+          <input type="month" class="gredure" id="gradureUni1">
           - 
-          <input type="month" name="gredure" id="gradureUni2">
+          <input type="month" class="gredure" id="gradureUni2">
         </td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>
+          <input type="text" class="schoolclass" size="20">  
+        </td>
+        <td>
+          <input type="text" class="major" size="15">
+        </td>
+        <td><input type="text" class="score" value="/4.5" size="10"></td>
+        <td>
+          <select class="locationUni" id="uniLocation">
+            <option value="seoul">서울</option>
+            <option value="incheon">인천</option>
+            <option value="kyounki">경기</option>
+            <option value="pusan">부산</option>
+        </td>
       </tr>
       <tr>
         <td>
-          <input type="month" name="gredure" id="gradureUni1">
+          <input type="month" class="gredure" id="gradureUni1">
           - 
-          <input type="month" name="gredure" id="gradureUni2">
+          <input type="month" class="gredure" id="gradureUni2">
         </td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>
+          <input type="text" class="schoolclass" size="20">  
+        </td>
+        <td>
+          <input type="text" class="major" size="15">
+        </td>
+        <td><input type="text" class="score" value="/4.5" size="10"></td>
+        <td>
+          <select class="locationUni" id="uniLocation">
+            <option value="seoul">서울</option>
+            <option value="incheon">인천</option>
+            <option value="kyounki">경기</option>
+            <option value="pusan">부산</option>
+        </td>
       </tr>
     </table>
     <hr>
@@ -179,52 +232,85 @@
       </tr>
       <tr>
         <td>
-          <input type="month" name="cetificate">
+          <input type="month" class="cetificate">
         </td>
-        <td>사업용 조종사</td>
-        <td>도로교통안전공단</td>
-        <td>다발/단발/계기</td>
+        <td>
+          <input type="text" class="certi" size="25" value="사업용 조종사">
+        </td>
+        <td>
+          <input type="text" class="certiAgent" size="20" value="도로교통안전공단">
+        </td>
+        <td>
+          <input type="text" class="certiLevel" size="10" value="다발/단발/계기"></td>
       </tr>
       <tr>
         <td>
-          <input type="month" name="cetificate">
+          <input type="month" class="cetificate">
         </td>
-        <td>운전면허증</td>
-        <td>서울시경찰청</td>
-        <td>1종 대형</td>
+        <td>
+          <input type="text" class="certi" size="25" value="운전면허증">
+        </td>
+        <td>
+          <input type="text" class="certiAgent" size="20" value="서울지방경찰청">
+        </td>
+        <td>
+          <input type="text" class="certiLevel" size="10" value="1종 대형"></td>
+      </tr>
       </tr>
       <tr>
         <td>
-          <input type="month" name="cetificate">
+          <input type="month" class="cetificate">
         </td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>
+          <input type="text" class="certi" size="25" >
+        </td>
+        <td>
+          <input type="text" class="certiAgent" size="20" >
+        </td>
+        <td>
+          <input type="text" class="certiLevel" size="10" ></td>
+      </tr>
       </tr>
       <tr>
         <th rowspan="3">외국어<br>/<br>공인시험</th>
         <td>
-          <input type="month" name="cetificate">
+          <input type="month" class="cetificate">
         </td>
-        <td>TOEIC</td>
-        <td>ETS</td>
-        <td></td>
+        <td>
+          <input type="text" class="tests" size="25" value="TOEIC">
+        </td>
+        <td>
+          <input type="text" class="testAgent" size="20" value="ETS">
+        </td>
+        <td>
+          <input type="text" class="certiLevel" size="10"></td>
+      </tr>
       </tr>
       <tr>
         <td>
-          <input type="month" name="cetificate">
+          <input type="month" class="cetificate">
         </td>
-        <td>한국사능력검정</td>
-        <td>국사편찬위원회</td>
-        <td>1급</td>
+        <td>
+          <input type="text" class="tests" size="25" value="한국사능력검정">
+        </td>
+        <td>
+          <input type="text" class="testAgent" size="20" value="국사편찬위원회">
+        </td>
+        <td>
+          <input type="text" class="certiLevel" size="10"></td>
       </tr>
       <tr>
         <td>
-          <input type="month" name="cetificate">
+          <input type="month" class="cetificate">
         </td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>
+          <input type="text" class="tests" size="25" >
+        </td>
+        <td>
+          <input type="text" class="testAgent" size="20">
+        </td>
+        <td>
+          <input type="text" class="certiLevel" size="10"></td>
       </tr>
     </table>
     <hr>
@@ -236,58 +322,68 @@
         <th>기관</th>
       </tr>
       <tr>
-        <td><input type="month" name="activity"></td>
-        <td>호주 워킹홀리데이</td>
-        <td></td>
+        <td><input type="month" class="activity"></td>
+        <td>
+          <input type="text" class="activity" size="50"></td>
+        <td>
+          <input type="text" class="activity" size="40"></td>
+        </td>
       </tr>
       <tr>
-        <td><input type="month" name="activity"></td>
-        <td>FAA PPL course</td>
-        <td><a href="https://www.flyaeroguard.com/">Aeroguard Flight Training Center</a></td>
+        <td><input type="month" class="activity"></td>
+        <td>
+          <input type="text" class="activity" size="50"></td>
+        <td>
+          <input type="text" class="activity" size="40"></td>
+        </td>
       </tr>
       <tr>
-        <td><input type="month" name="activity"></td>
-        <td>사업용 조종사 통합 과정</td>
-        <td><a href="pilot.sc.kr">울진비행교육원</a></td>
-      </tr>
+        <td><input type="month" class="activity"></td>
+        <td>
+          <input type="text" class="activity" size="50"></td>
+        <td>
+          <input type="text" class="activity" size="40"></td>
+        </td>
       <tr>
-        <td><input type="month" name="activity"></td>
-        <td>Java 빅데이터 과정</td>
-        <td><a href="goott.co.kr">Goott Academy</a></td>
-      </tr>
+        <td><input type="month" class="activity"></td>
+        <td>
+          <input type="text" class="activity" size="50"></td>
+        <td>
+          <input type="text" class="activity" size="40"></td>
+        </td>
     </table>
     <hr>
     <table border="1" id="workExp">
       <caption>5. 경 력 사 항</caption>
       <tr>
         <th>회사명</th>
-        <td>아이티엠반도체</td>
-        <td>길라닉스</td>
-        <td>김재운 초밥사랑</td>
+        <td><input type="text" size="30"></td>
+        <td><input type="text" size="30"></td>
+        <td><input type="text" size="30"></td>
       </tr>
       <tr>
         <th>근무기간</th>
         <td>
-          <input type="month" name="workExprience">
+          <input type="month" class="workExprience">
           - 
-          <input type="month" name="workExprience">
+          <input type="month" class="workExprience">
         </td>
         <td>
-          <input type="month" name="workExprience">
+          <input type="month" class="workExprience">
           - 
-          <input type="month" name="workExprience">
+          <input type="month" class="workExprience">
         </td>
         <td>
-          <input type="month" name="workExprience">
+          <input type="month" class="workExprience">
           - 
-          <input type="month" name="workExprience">
+          <input type="month" class="workExprience">
         </td>
       </tr>
       <tr>
         <th>근무부서<br>/직위</th>
-        <td>해외영업팀 / 대리</td>
-        <td>영업팀 / 과장</td>
-        <td>조리부 / 뒷주방 및 초밥 담당</td>
+        <td><input type="text" size="30"></td>
+        <td><input type="text" size="30"></td>
+        <td><input type="text" size="30"></td>
       </tr>
     </table>
     <script src="https://kit.fontawesome.com/acb94ab00c.js" crossorigin="anonymous"></script>
