@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 다양한 Input type들</title>
+  </head>
+  <body>
+    <form>
+      <div>
+        <label for="mem_id">아이디 : </label>
+        <input type="text" name="userId" id="mem_id" placeholder="아이디를 입력하세요!!" 
+        minlength="4" maxlength="20">
+      </div>
+      <div>
+        <label for="mem_pw">비밀번호 : </label>
+        <input type="password" name="userPw" id="mem_pw" placeholder="비밀번호를 입력하세요!!">
+      </div>
+      <div>
+        <label for="memo">메모 : </label>
+        <!-- 대량의 문자열을 입력 받는 도구 -->
+        <textarea name="memo" id="memo" cols="50" rows="10"></textarea>
+      </div>
+      <fieldset>
+        <legend>좋아하는 음식</legend>
+        <!-- checkbox 는 다중 선택 가능 -->
+        <input type="checkbox" name="food" value="jj" > 짜장면
+        <input type="checkbox" name="food" value="dd" > 떡볶이
+        <input type="checkbox" name="food" value="ra" > 라면
+        <input type="checkbox" name="food" value="kim"> 김치찌개
+      </fieldset>
+
+      <fieldset>
+        <legend>취미</legend>
+        <input type="checkbox" name="hobby" value="golf" > 골프
+        <input type="checkbox" name="hobby" value="basket" > 농구
+        <input type="checkbox" name="hobby" value="fly"> 비행
+        <input type="checkbox" name="hobby" value="run"> 달리기
+        <input type="checkbox" name="hobby" value="netflix"> Netflix
+      </fieldset>  
+
+      <fieldset>
+        <legend>성별</legend>
+        <!-- 단일 선택 가능 (name 속석 값을 맞춰 주어야 한가지만 선택 가능)-->
+        <input type="radio" name="gender" value="male"> 남성
+        <input type="radio" name="gender" value="female"> 여성
+        <input type="radio" name="gender" value="unknown"> 미상
+      </fieldset>
+      
+      <div>
+        <label for="mobileCom"> 통신사 </label>
+        <select name="telecom" id="mobileCom" size="3">
+          <option value="skt">SK Telecome</option>
+          <option value="kt">KT</option>
+          <option value="lgu">LG U+</option>
+          <option value="cheap">알뜰폰</option>
+        </select>
+      </div>
+
+      <div>
+      <label for="bDay"> 생년월일 <br>
+        <input type="date" name="birth" id="bDay">
+      </div>
+
+      <div>
+        <label for="email">email</label>
+        <input type="email" name="userEmail" id="email">
+      </div>
+
+      <div>
+        <label for="upFile">파일 업로드 : </label>
+        <input type="file" name="uploadedFile" id="upFile">
+      </div>
+
+      <div>
+        <label for="userColor">좋아하는 색상 :</label> 
+        <input type="color" name="faverColor" id="userColor">
+      </div>
+
+      <div>
+        <label for="userAge">나이 : </label> 
+        <input type="number" name="age" id="userAge" min="0" max="180">
+      </div>
+
+      <div>
+        <label for="userWage">희망 연봉 : </label> 
+        <input type="range" name="wage" id="userWage" min="5000" max="100000">
+      </div>
+
+
+      <button type="submit"> 전 송 </button>
+      <button type="reset"> 취 소 </button>
+    </form>
+  </body>
+</html>
