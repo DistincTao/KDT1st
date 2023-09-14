@@ -6,11 +6,12 @@
     <title> 다양한 Input type들</title>
   </head>
   <body>
-    <form>
+    <form action="13_1_resultPage.html" method="get">
       <div>
         <label for="mem_id">아이디 : </label>
         <input type="text" name="userId" id="mem_id" placeholder="아이디를 입력하세요!!" 
-        minlength="4" maxlength="20">
+        minlength="4" maxlength="20"  autocomplete="off" autofocus
+        value="abcd" readonly>
       </div>
       <div>
         <label for="mem_pw">비밀번호 : </label>
@@ -24,7 +25,7 @@
       <fieldset>
         <legend>좋아하는 음식</legend>
         <!-- checkbox 는 다중 선택 가능 -->
-        <input type="checkbox" name="food" value="jj" > 짜장면
+        <input type="checkbox" name="food" value="jj" checked> 짜장면
         <input type="checkbox" name="food" value="dd" > 떡볶이
         <input type="checkbox" name="food" value="ra" > 라면
         <input type="checkbox" name="food" value="kim"> 김치찌개
@@ -32,7 +33,7 @@
 
       <fieldset>
         <legend>취미</legend>
-        <input type="checkbox" name="hobby" value="golf" > 골프
+        <input type="checkbox" name="hobby" value="golf" checked> 골프
         <input type="checkbox" name="hobby" value="basket" > 농구
         <input type="checkbox" name="hobby" value="fly"> 비행
         <input type="checkbox" name="hobby" value="run"> 달리기
@@ -42,7 +43,7 @@
       <fieldset>
         <legend>성별</legend>
         <!-- 단일 선택 가능 (name 속석 값을 맞춰 주어야 한가지만 선택 가능)-->
-        <input type="radio" name="gender" value="male"> 남성
+        <input type="radio" name="gender" value="male" checked> 남성
         <input type="radio" name="gender" value="female"> 여성
         <input type="radio" name="gender" value="unknown"> 미상
       </fieldset>
@@ -59,7 +60,7 @@
 
       <div>
       <label for="bDay"> 생년월일 <br>
-        <input type="date" name="birth" id="bDay">
+        <input type="date" name="birth" id="bDay" min="1900-01-01" max="2023-12-31">
       </div>
 
       <div>
@@ -84,9 +85,13 @@
 
       <div>
         <label for="userWage">희망 연봉 : </label> 
-        <input type="range" name="wage" id="userWage" min="5000" max="100000">
+        <input type="range" name="wage" id="userWage" min="5000" max="100000" step="1000">
       </div>
 
+      <div>
+        숨겨진 값 : 
+        <input type="hidden" name="hiddenValue" value="14">
+      </div>
 
       <button type="submit"> 전 송 </button>
       <button type="reset"> 취 소 </button>
