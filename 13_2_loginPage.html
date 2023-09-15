@@ -3,45 +3,31 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style_login.css">
     <title>login</title>
-    <style>
-      fieldset {
-        text-align: center;
-        width: 200px;
-      }
-      .loginInfo {
-        height: 20px;
-        margin: 5px;
-      }
-      #searchId {
-        padding: 10px ;
-        font-size: 13px;
-      }
-      .loginBt {
-        margin: 10px;
-      }
-    </style>
   </head>
   <body>
-    <fieldset>
-      <legend> Login </legend>
-      <form action="13_4_index.html" class="login" target="_blank">
-        <div class="login">
-          <input type="email" class="loginInfo" name="userId" placeholder="이메일" pattern="+@+" required autocomplete="off">
-        </div>
-        <div class="login">
-          <input type="password" class="loginInfo" name="userPassword" placeholder="비밀번호" min="8" required>
-        </div>
-          <button type="submit" value="Login" class="loginBt">로 그 인</button>
-      </form> 
-        <div id="searchId">
-        <a href="13_5_searchID.html">비밀번호를 잊으셨나요?</a>
-        </div>
-        <hr>
-      <form action="13_3_signinPage.html" class="signIn" target="_blank">
-        <button class="signIn" value="">새 계정 만들기</button>
-      </form>
-
-    </fieldset>
+    <div>
+      <fieldset>
+        <legend> Login </legend>
+        <form action="13_4_index.html" id="login_form" target="_self">
+          <div class="login">
+            <input class="loginInfo" id="inputId" type="email" name="userId" placeholder="user@example.com" required autocomplete="off">
+          </div>
+          <div class="login">
+            <input class="loginInfo" id="inputPw" type="password" name="userPw" placeholder="password" required>
+          </div>
+            <button id="loginBt" type="submit" value="Login" >로 그 인</button>
+        </form> 
+          <div id="searchId">
+          <a href="13_5_searchID.html">비밀번호를 잊으셨나요?</a>
+          </div>
+          <hr>
+        <form action="13_3_signinPage.html" class="signIn" target="_blank">
+          <button class="signIn">새 계정 만들기</button>
+        </form>
+      </fieldset>
+    </div>
+    <script src="js/script_login.js"></script>
   </body>
 </html>
