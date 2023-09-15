@@ -1,0 +1,15 @@
+.container {
+  text-align: center;
+  border: 2px solid black;
+}
+.mem_type {
+  display: flex;
+  border: 1px solid black;
+}
+.mem_type1 {
+  display: flex;
+  border: 1px solid black;
+}
+.id {
+  display: flex;
+}
