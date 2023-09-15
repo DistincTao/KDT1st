@@ -1,28 +1,46 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style_login.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style_login.css" />
     <title>login</title>
   </head>
   <body>
     <div>
       <fieldset>
-        <legend> Login </legend>
-        <form action="13_4_index.html" id="login_form" target="_self">
-          <div class="login">
-            <input class="loginInfo" id="inputId" type="email" name="userId" placeholder="user@example.com" required autocomplete="off">
-          </div>
-          <div class="login">
-            <input class="loginInfo" id="inputPw" type="password" name="userPw" placeholder="password" required>
-          </div>
-            <button id="loginBt" type="submit" value="Login" >로 그 인</button>
-        </form> 
-          <div id="searchId">
+        <legend>Login</legend>
+        <div id="errorMsg">
+          <p id="idErrorMsg">
+            Invalid username
+            <span id="pwErrorMsg">and/or password</span>
+          </p>
+        </div>
+        <form id="login_form" target="_self">
+            <input
+              class="loginInfo"
+              id="inputId"
+              type="email"
+              name="userId"
+              placeholder="user@example.com"
+              required
+              autocomplete="off"
+            />
+            <input
+              class="loginInfo"
+              id="inputPw"
+              type="password"
+              name="userPw"
+              placeholder="password"
+              required
+            />
+
+          <button id="loginBt" type="submit" value="Login">로 그 인</button>
+        </form>
+        <div id="searchId">
           <a href="13_5_searchID.html">비밀번호를 잊으셨나요?</a>
-          </div>
-          <hr>
+        </div>
+        <hr />
         <form action="13_3_signinPage.html" class="signIn" target="_blank">
           <button class="signIn">새 계정 만들기</button>
         </form>
