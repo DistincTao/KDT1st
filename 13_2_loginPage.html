@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style_login.css" />
     <title>login</title>
+    <style>
+      #errorMsg {
+        opacity: 0;
+      }
+    </style>
   </head>
   <body>
     <div>
@@ -16,30 +21,33 @@
             <span id="pwErrorMsg">and/or password</span>
           </p>
         </div>
-        <form id="login_form" target="_self">
+        <form id="loginForm"> <!-- action="13_4_index.html"> -->
+          <div class="inputBox">
             <input
               class="loginInfo"
               id="inputId"
-              type="email"
+              type="text"
               name="userId"
-              placeholder="user@example.com"
+              placeholder="ID"
               required
               autocomplete="off"
             />
+          </div>
+          <div class="inputBox">
             <input
               class="loginInfo"
               id="inputPw"
-              type="password"
+              type="Password"
               name="userPw"
               placeholder="password"
               required
             />
-
-          <button id="loginBt" type="submit" value="Login">로 그 인</button>
+          </div>
+          <button id="loginBt" type="submit" disabled>로 그 인</button>
+          <div id="search-id">
+            <a href="13_5_searchID.html">비밀번호를 잊으셨나요?</a>
+          </div>
         </form>
-        <div id="searchId">
-          <a href="13_5_searchID.html">비밀번호를 잊으셨나요?</a>
-        </div>
         <hr />
         <form action="13_3_signinPage.html" class="signIn" target="_blank">
           <button class="signIn">새 계정 만들기</button>
