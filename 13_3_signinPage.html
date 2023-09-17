@@ -86,9 +86,9 @@
                 <option value="041">041</option>
               </select>
               -
-              <input type="text" name="phone2" size="4" autocomplete="off" required>
+              <input type="text" name="phone2" size="4" autocomplete="off">
               -
-              <input type="text" name="phone3" size="4" autocomplete="off" required>
+              <input type="text" name="phone3" size="4" autocomplete="off">
             </td>
           </tr>
           <tr>
@@ -143,26 +143,23 @@
         <h3>전체 동의</h3>
         <div class="termsConditions">
           <p>
-            <input type="checkbox" name="allAgree">
+            <input class="allCheck" type="checkbox" name="allAgree">
             이용약관 및 개인정보수집 및 이용, 쇼핑정보 수신(선택)에 모두 동의 합니다.
           </p>
-        </div>
-        <div>
+
           <p>[필수] 이용약관 동의</p>
           <iframe src="files/terms.pdf" frameborder="0"></iframe><br>
           <p>
-            이용약관에 동의하십니까? <input type="checkbox" name="agree" required> 동의함
-          </p>
-        </div>
-        <div>
+            이용약관에 동의하십니까? <input class="agreeCheck" id="check1" type="checkbox" name="agree" required> 동의함
+          </p> 
+
           <P>[필수] 개인정보 수집 및 이용 동의</P>
           <iframe src="files/personal.pdf" frameborder="0"></iframe> <br>
-          <p>개인정보 수집 및 이용에 동의하십니까? <input type="checkbox" name="agree" required> 동의함</p>
-        </div>
-        <div>
+          <p>개인정보 수집 및 이용에 동의하십니까? <input class="agreeCheck" id="check2" type="checkbox" name="agree" required> 동의함</p>
+
           <P>[선택] 정보 수신 동의</P>
           <iframe src="files/Marketing.pdf" frameborder="0"></iframe> <br>
-          <p>SMS 수신에 동의하십니까? <input type="checkbox" name="agree" required> 동의함</p>
+          <p>SMS 수신에 동의하십니까? <input class="agreeCheck" id="check3" type="checkbox" name="agree"> 동의함</p>
         </div>
         <div class="submitButton">
           <button type="submit">가입하기</button>
@@ -205,6 +202,7 @@
           }
         }).open();
       }
-  </script>
+    </script>
+    <script src="js/script_signin.js"></script>
   </body>
 </html>
