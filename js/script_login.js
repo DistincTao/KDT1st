@@ -41,3 +41,8 @@ loginBt.addEventListener("click", (event) => {
     }
   }
 );
+
+let searchId = document.getElementById ('searchId');
+searchId.addEventListener("click", (event) => {
+  location.href="13_5_searchID.html";
+})

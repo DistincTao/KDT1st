@@ -12,4 +12,7 @@ fieldset {
 }
 .loginBt {
   margin: 10px;
+}#searchId {
+  text-decoration: underline;
+  color: blue; 
 }
